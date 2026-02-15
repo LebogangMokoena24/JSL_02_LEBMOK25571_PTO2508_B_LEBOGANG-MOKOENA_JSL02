@@ -32,3 +32,22 @@ let task1Status = getValidStatus(1);
 let task2Title = prompt("Enter title for Task 2:");
 let task2Description = prompt("Enter description for Task 2:");
 let task2Status = getValidStatus(2);
+// -------- CHECK COMPLETED TASKS --------
+let hasCompletedTask = false;
+
+// Check Task 1
+if (task1Status === "done") {
+    console.log(`Title: "${task1Title}", Status: "${task1Status}"`);
+    hasCompletedTask = true;
+}
+
+// Check Task 2
+if (task2Status === "done") {
+    console.log(`Title: "${task2Title}", Status: "${task2Status}"`);
+    hasCompletedTask = true;
+}
+
+// If no tasks are completed
+if (!hasCompletedTask) {
+    console.log("No tasks completed, let's get to work!");
+}
