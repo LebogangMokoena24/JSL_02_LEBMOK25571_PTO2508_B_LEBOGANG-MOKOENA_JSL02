@@ -28,3 +28,7 @@ function getValidStatus(taskNumber) {
 let task1Title = prompt("Enter title for Task 1:");
 let task1Description = prompt("Enter description for Task 1:");
 let task1Status = getValidStatus(1);
+// -------- TASK 2 --------
+let task2Title = prompt("Enter title for Task 2:");
+let task2Description = prompt("Enter description for Task 2:");
+let task2Status = getValidStatus(2);
