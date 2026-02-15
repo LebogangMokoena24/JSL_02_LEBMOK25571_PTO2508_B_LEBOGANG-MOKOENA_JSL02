@@ -7,7 +7,7 @@ This is a simple web-based Kanban task system where users can input two tasks wi
 ## Technologies Used
 - HTML
 - CSS
-- JavaScript (ES6)
+- JavaScript
 
 ## Features
 - Prompt user to input **two tasks** with title, description, and status
