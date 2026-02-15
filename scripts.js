@@ -24,14 +24,27 @@ function getValidStatus(taskNumber) {
         }
     }
 }
+
+// Function to prompt for task title/description and ensure they are not empty
+function getValidInput(promptText) {
+    let input = prompt(promptText);
+    while (!input) {
+        alert("This field is required!");
+        input = prompt(promptText);
+    }
+    return input;
+}
+
 // -------- TASK 1 --------
-let task1Title = prompt("Enter title for Task 1:");
-let task1Description = prompt("Enter description for Task 1:");
+let task1Title = getValidInput("Enter title for Task 1:");
+let task1Description = getValidInput("Enter description for Task 1:");
 let task1Status = getValidStatus(1);
+
 // -------- TASK 2 --------
-let task2Title = prompt("Enter title for Task 2:");
-let task2Description = prompt("Enter description for Task 2:");
+let task2Title = getValidInput("Enter title for Task 2:");
+let task2Description = getValidInput("Enter description for Task 2:");
 let task2Status = getValidStatus(2);
+
 // -------- CHECK COMPLETED TASKS --------
 let hasCompletedTask = false;
 
