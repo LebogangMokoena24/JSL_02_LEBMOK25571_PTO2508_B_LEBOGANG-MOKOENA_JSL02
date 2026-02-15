@@ -7,8 +7,14 @@ function getValidStatus(taskNumber) {
     while (true) {
         status = prompt(`Enter status for Task ${taskNumber} (todo, doing, done):`);
 
-        // Convert input to lowercase for consistency
-        status = status.toLowerCase();
+        // Check if user cancelled the prompt
+        if (status === null) {
+            alert("Status is required!");
+            continue;
+        }
+
+        // Convert input to lowercase and trim spaces
+        status = status.toLowerCase().trim();
 
         // Validate input
         if (status === "todo" || status === "doing" || status === "done") {
@@ -48,4 +54,5 @@ if (task2Status === "done") {
 if (!hasCompletedTask) {
     console.log("No tasks completed, let's get to work!");
 }
+
 
